@@ -5,4 +5,7 @@ RSpec.describe Task, :type => :model do
     expect(FactoryGirl.create(:task)).to be_valid
   end
   it { should validate_presence_of(:name) }
+
+  it { should have_many(:projects) }
+
 end
