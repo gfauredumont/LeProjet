@@ -17,6 +17,12 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 
+
+##### 3rd parties
+
+gem 'octokit', '~> 4.3'
+
+
 ##### BACK
 
 gem 'pg'
@@ -38,13 +44,17 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  # https://github.com/rweng/pry-rails
+  gem 'pry-rails'
+  # https://github.com/Mon-Ouie/pry-remote
+  # Use `rb: binding.remote_pry` `$ pry-remote`
+  gem 'pry-remote'
 
   gem 'rspec-rails',      '~> 3.5'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'faker', '~> 1.6', '>= 1.6.6'
+  gem 'simplecov',      '~> 0.12.0', :require => false
 end
 
 group :development do
