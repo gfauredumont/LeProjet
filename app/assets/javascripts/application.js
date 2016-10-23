@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery-ujs
+//= require tether
+//= require bootstrap
+//= require es5-shim/es5-shim.js
 //= require turbolinks
 //= require_tree .

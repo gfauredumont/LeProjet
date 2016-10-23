@@ -1,0 +1,27 @@
+{
+  "name": "le_projet",
+  "homepage": "https://github.com/gfauredumont/LeProjet",
+  "description": "Intertwined projects manager",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Guillaume FAURE-DUMONT <fauredumont@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.1",
+    "jquery-ujs": "~1.2.2",
+    "bootstrap": "~3.3.7",
+    "fortAwesome/font-awesome": "~4.6.3",
+    "es5-shim": "es-shims/es5-shim#~4.5.9"
+  }
+}
