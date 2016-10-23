@@ -15,7 +15,7 @@ pickle-email-*.html
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
 # I know it shouldn't be on Git but, the only online platform for this app is the prod one which is ENV_VARIABLES only
-config/secrets.yml
+#config/secrets.yml
 
 
 # dotenv
