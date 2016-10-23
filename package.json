@@ -1,0 +1,10 @@
+{
+  "name": "le_projet",
+  "version": "0.1.0",
+  "dependencies": {
+    "bower": "~1.7.9"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  }
+}
