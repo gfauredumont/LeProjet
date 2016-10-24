@@ -1,0 +1,23 @@
+- if @projects.present?
+  %h2.sidebar-header
+    = link_to root_path do
+      %i.fa.fa-home{ "aria-hidden" => "true"}
+    Projects
+    = link_to new_project_path, {class: "add-project-btn button"} do
+      %i.fa.fa-plus-circle{ "aria-hidden" => "true"}
+
+
+  .list-group
+    - @projects.each do |project|
+      = link_to project_path(project), { class: "project list-group-item #{@project&.present? && @project == project ? 'active' : '' }"} do
+        %h4.list-group-item-heading
+          = project.name
+          %small.project-tasks-number
+            = project.tasks.count
+            .fa.fa-tasks
+        %p.list-group-item-text
+          = project.description
+
+- else
+  %h2
+    No project loaded yet :/

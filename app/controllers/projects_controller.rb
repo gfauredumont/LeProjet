@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    # Projects are already loaded from ApplicationController
   end
 
   # GET /projects/1

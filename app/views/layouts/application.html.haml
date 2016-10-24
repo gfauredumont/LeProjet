@@ -2,9 +2,34 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Leprojet
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Le Projet
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    = yield
+  %body{style: "padding-top: 50px;"}
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to "Le Projet", root_path, {class: "navbar-brand"}
+        #navbar.navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to "Dashboard", root_path
+            %li
+              %a{href: "#"} User
+
+    .container-fluid
+      .row
+        .col-sm-3.col-md-2.sidebar
+          = render 'vitrine/sidebar'
+
+        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+          .container
+            = yield
