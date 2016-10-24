@@ -1,0 +1,17 @@
+body {
+  a:hover {
+    background-color: rgba(0,0,0,0);
+    text-decoration:  none;
+  }
+  .main {
+    padding-right:  40px;
+    padding-left:   40px;
+
+    .add-task-btn {
+      float:        right;
+    }
+    form .actions input {
+      float:        right;
+    }
+  }
+}

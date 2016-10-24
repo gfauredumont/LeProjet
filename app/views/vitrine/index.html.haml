@@ -1,24 +1,55 @@
-%h1
-  Welcome in
-  %strong
-    Le Projet
-%h2
-  This is a project management service that does... nothing !
-  (expect retreive and gather data from 3rd parties ;) )
+.row
+  %h1.page-header
+    Welcome to
+    %strong
+      Le Projet
+    %br/
+    %small
+      This is a project management service that only retreives and gathers data from 3rd parties ;)
 
+%br/
 
-%h2
-  Here are the current projects listed:
+.row
 
-%ul
-  - @projects.each do |project|
-    %li
-      = link_to project.name, project_path(project)
+  .col-sm-12.col-md-6
+    .row
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            Create a new task
+      .panel-body
+        = render 'tasks/form', task: @new_task
 
-%h2
-  Here are the current projects listed:
+  .col-sm-12.col-md-5.col-md-offset-1
+    .row
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            Available projects
+      .panel-body
+        %table.table.table-striped.table-hover
+          - @projects.each do |project|
+            %tr
+              %td
+                = link_to project_path(project) do
+                  %i.fa.fa-briefcase
+                  &nbsp;
+                  = project.name
 
-%ul
-  - @unassigned_tasks.each do |task|
-    %li
-      = link_to task.name, task_path(task)
+%br/
+
+.row
+  .panel.panel-default
+    .panel-heading
+      %h3.panel-title
+        Unassigned tasks
+    .panel-body
+      %table.table.table-striped.table-hover
+        - @unassigned_tasks.each do |task|
+          %tr
+            %td
+              %i.fa.fa-tasks
+            %td
+              = link_to task.name, task_path(task)
+            %td
+              = task.description

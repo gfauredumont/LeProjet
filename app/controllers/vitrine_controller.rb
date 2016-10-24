@@ -5,5 +5,6 @@ class VitrineController < ApplicationController
   def index
     @projects = Project.all
     @unassigned_tasks = Task.unassigned
+    @new_task = Task.new
   end
 end
