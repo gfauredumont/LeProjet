@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   private
     def get_projects
+      # WARNING: projects_controller doesn't load projects anymore due to this
       @projects = Project.all
     end
 end
