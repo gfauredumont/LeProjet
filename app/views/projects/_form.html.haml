@@ -7,11 +7,12 @@
       %ul
         - project.errors.full_messages.each do |message|
           %li= message
-  .field
+
+  .field.form-group
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: "form-control", placeholder: "Project name"
+  .field.form-group
     = f.label :description
-    = f.text_field :description
+    = f.text_field :description, class: "form-control", placeholder: "Short description of the project"
   .actions
-    = f.submit
+    = f.submit class: "btn btn-primary"

@@ -7,14 +7,21 @@
       %ul
         - task.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :task_type
-    = f.text_field :task_type
+
+  .row
+    .col-sm-12.col-md-6
+      .field.form-group
+        = f.label :name
+        = f.text_field :name, class: "form-control", placeholder: "Task name"
+    .col-sm-12.col-md-6
+      .field.form-group
+        = f.label :task_type
+        = f.text_field :task_type, class: "form-control", placeholder: "Type of task"
+  .row
+    .col-sm-12
+      .field.form-group
+        = f.label :description
+        = f.text_field :description, class: "form-control", placeholder: "Task description"
+
   .actions
-    = f.submit
+    = f.submit class: "btn btn-primary"
