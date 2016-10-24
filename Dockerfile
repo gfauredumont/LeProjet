@@ -1,4 +1,4 @@
-FROM ruby:2.3.0
+FROM ruby:2.3.1
 MAINTAINER Guillaume FAURE-DUMONT
 RUN apt-get update -qq && apt-get install -y build-essential postgresql-contrib nodejs npm nodejs-legacy
 RUN gem install foreman
