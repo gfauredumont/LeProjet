@@ -17,8 +17,8 @@
         .panel-heading
           %h3.panel-title
             Create a new task
-      .panel-body
-        = render 'tasks/form', task: @new_task
+        .panel-body
+          = render 'tasks/form', task: @new_task
 
   .col-sm-12.col-md-5.col-md-offset-1
     .row
@@ -26,15 +26,18 @@
         .panel-heading
           %h3.panel-title
             Available projects
-      .panel-body
-        %table.table.table-striped.table-hover
-          - @projects.each do |project|
-            %tr
-              %td
-                = link_to project_path(project) do
-                  %i.fa.fa-briefcase
-                  &nbsp;
-                  = project.name
+            = link_to new_project_path, {class: "add-project-btn button"} do
+              %i.fa.fa-plus-circle{ "aria-hidden" => "true"}
+
+        .panel-body
+          %table.table.table-striped.table-hover
+            - @projects.each do |project|
+              %tr
+                %td
+                  = link_to project_path(project) do
+                    %i.fa.fa-briefcase
+                    &nbsp;
+                    = project.name
 
 %br/
 
