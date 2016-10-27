@@ -53,6 +53,11 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # DEVISE mailer configuration
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 5169 }
+
+  # Use MailCatcher as SMTP server for dev purpose
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => 'mailcatcher', :port => 1025 }
+  config.action_mailer.raise_delivery_errors = false
 
 end

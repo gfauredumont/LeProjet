@@ -12,15 +12,15 @@ web:
   volumes:
     - .:/leprojet
   ports:
-    - "3000:3000"
+    - "5169:3000"
   links:
     - db
-    # - mailcatcher
+    - mailcatcher
   env_file:
     - '.env.web'
   command: bash -c "rm -rf tmp/* && foreman start"
 
-# mailcatcher:
-#   image: schickling/mailcatcher
-#   ports:
-#     - "1080:1080"
+mailcatcher:
+  image: schickling/mailcatcher
+  ports:
+    - "1080:1080"
