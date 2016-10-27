@@ -22,8 +22,22 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               = link_to "Dashboard", root_path
-            %li
-              %a{href: "#"} User
+
+            - if user_signed_in?
+              %li
+                = link_to edit_user_registration_path do
+                  %i.fa.fa-user{ "aria-hidden" => "true", "data-placement" => "bottom", "data-toggle" => "tooltip", :title => "#{current_user.email}"}
+
+              %li
+                = link_to destroy_user_session_path, :method => :delete do
+                  %i.fa.fa-sign-out{ "aria-hidden" => "true", "data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Sign out"}
+
+            - else
+              %li
+                = link_to new_user_session_path do
+                  %i.fa.fa-sign-in{ "aria-hidden" => "true", "data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Sign in"}
+
+
 
     %p.flashes
       #notice
