@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 ##### 3rd parties
 
 gem 'octokit', '~> 4.3'
-
+gem 'devise', '~> 4.2'
 
 ##### BACK
 
