@@ -54,6 +54,7 @@ group :development, :test do
 
   gem 'rspec-rails',      '~> 3.5'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+  gem 'capybara', '~> 2.10', '>= 2.10.1'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'faker', '~> 1.6', '>= 1.6.6'
   gem 'simplecov',      '~> 0.12.0', require: false
