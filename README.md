@@ -5,6 +5,17 @@ Concept: gather all project/task manager & other_infos about a project to be abl
 
 Tasks have hierarchy and a task can be "shared" by several parent-tasks (even from different projects).
 
+## Environment & dev
+
+I work on this project as a learning process: I try to find new ways of working better: TDD, CI, DDD and stuff ;)
+
+For now:
+- MIT licenced project hosted on GitHub
+- Travis CI hooked to repo
+- Heroku automatic deploy on CI success
+- DDD models implemention (more later)
+- some parts are implemented in TDD (project-members for instance)
+
 ## First goals:
 
 - Basic schema for later plug of API, then hooks:
