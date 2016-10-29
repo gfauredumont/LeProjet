@@ -84,7 +84,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-    # DEVISE mailer configuration
+  # DEVISE mailer configuration
   config.action_mailer.default_url_options = { host: 'leprojet.herokuapp.com', port: 80 }
 
 end
