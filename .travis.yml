@@ -2,6 +2,8 @@ language: ruby
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database leprojet_test;' -U postgres
+  - npm install -g bower
+  - bower install
 addons:
   code_climate:
     repo_token: cde3fe275f75c8a3453b42068583041df0fe64231639abe0c8101c17fe87b813
