@@ -16,8 +16,6 @@ RSpec.describe ProjectsUser, type: :model do
 
     expect(project).to be_present
     expect(Project.find(project.id)).to be_present
-    # be_present
-
   end
 
   it "list project in user when added as member" do
