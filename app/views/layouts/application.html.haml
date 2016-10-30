@@ -38,12 +38,20 @@
                   %i.fa.fa-sign-in{ "aria-hidden" => "true", "data-placement" => "bottom", "data-toggle" => "tooltip", :title => "Sign in"}
 
 
+    #layout-flashes
+      - if notice.present?
+        .alert.alert-info.alert-dismissible
+          = notice
+          %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+            %span{"aria-hidden" => "true"}×
 
-    %p.flashes
-      #notice
-        = notice
-      #alert
-        = alert
+      - if alert.present?
+        .alert.alert-danger.alert-dismissible
+          = alert
+          %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+            %span{"aria-hidden" => "true"}×
+
+
 
     .container-fluid
       .row

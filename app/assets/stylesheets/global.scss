@@ -1,0 +1,13 @@
+body {
+  a:hover {
+    background-color: rgba(0,0,0,0);
+    text-decoration:  none;
+  }
+
+  #layout-flashes {
+    position:         fixed;
+    top:              65px;
+    right:            15px;
+    width:            33%;
+  }
+}
