@@ -6,5 +6,6 @@ FactoryGirl.define do
     password { Faker::Internet.password(10, 20, true, true) }
     password_confirmation { self.password }
 
+    confirmed_at Time.now
   end
 end
