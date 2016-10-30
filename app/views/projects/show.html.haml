@@ -13,6 +13,23 @@
   .panel.panel-default
     .panel-heading
       %h3.panel-title
+        Informations
+
+    .panel-body
+      %ul
+        %li
+          Owner:
+          = @project.owner.email
+        %li
+          Created:
+          = @project.created_at
+        %li
+          Last modified:
+          = @project.updated_at
+
+  .panel.panel-default
+    .panel-heading
+      %h3.panel-title
         Project's tasks
 
         = link_to new_task_path, {class: "add-task-btn button"} do
