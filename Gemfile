@@ -58,7 +58,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.7'
   gem 'faker', '~> 1.6', '>= 1.6.6'
   gem 'simplecov',      '~> 0.12.0', require: false
-  gem 'codeclimate-test-reporter', '~> 1.0.0-rc2', require: false
+  gem 'codeclimate-test-reporter', '~> 0.6.0', require: false
 end
 
 group :development do
