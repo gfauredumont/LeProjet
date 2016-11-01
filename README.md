@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/gfauredumont/LeProjet.svg?branch=master)](https://travis-ci.org/gfauredumont/LeProjet)
-
+[![Build Status](https://travis-ci.org/gfauredumont/LeProjet.svg?branch=master)](https://travis-ci.org/gfauredumont/LeProjet)  [![Code Climate](https://codeclimate.com/github/gfauredumont/LeProjet/badges/gpa.svg)](https://codeclimate.com/github/gfauredumont/LeProjet)
 
 # LeProjet: Project connector
 
