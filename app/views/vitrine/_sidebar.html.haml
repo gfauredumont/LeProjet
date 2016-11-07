@@ -3,8 +3,9 @@
     = link_to root_path do
       %i.fa.fa-home{ "aria-hidden" => "true"}
     Projects
-    = link_to new_project_path, {class: "add-project-btn button"} do
-      %i.fa.fa-plus-circle{ "aria-hidden" => "true"}
+    - if user_signed_in?
+      = link_to new_project_path, {class: "add-project-btn button"} do
+        %i.fa.fa-plus-circle{ "aria-hidden" => "true"}
 
 
   .list-group
