@@ -18,7 +18,12 @@
           %h3.panel-title
             Create a new task
         .panel-body
-          = render 'tasks/form', task: @new_task
+          - if user_signed_in?
+            = render 'tasks/form', task: @new_task
+          - else
+            You need to
+            = link_to 'login', new_user_session_path
+            before creating new tasks
 
   .col-sm-12.col-md-5.col-md-offset-1
     .row
