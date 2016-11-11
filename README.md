@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/gfauredumont/LeProjet.svg?branch=master)](https://travis-ci.org/gfauredumont/LeProjet)  [![Code Climate](https://codeclimate.com/github/gfauredumont/LeProjet/badges/gpa.svg)](https://codeclimate.com/github/gfauredumont/LeProjet)
-
+ [![Inline docs](http://inch-ci.org/github/gfauredumont/LeProjet.svg?branch=master)](http://inch-ci.org/github/gfauredumont/LeProjet)
+ 
 # LeProjet: Project connector
 
 Concept: gather all project/task manager & other_infos about a project to be able to manage everything at a glance.
