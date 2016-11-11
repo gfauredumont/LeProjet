@@ -85,6 +85,17 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # DEVISE mailer configuration
-  config.action_mailer.default_url_options = { host: 'leprojet.herokuapp.com', port: 80 }
+  config.action_mailer.default_url_options = { host: 'leprojet.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+    address:        'smtp.gmail.com',
+    port:           587,
+    domain:         'leprojet.herokuapp.com',
+    authentication: :login,
+    enable_starttls_auto: true,
+    user_name:      ENV['GMAIL_ACCOUNT'],
+    password:       ENV['GMAIL_TOKEN']
+  }
 
 end
