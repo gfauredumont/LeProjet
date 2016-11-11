@@ -18,6 +18,10 @@
             .fa.fa-tasks
         %p.list-group-item-text
           = project.description
+        %p.list-group-item-text
+          %i.fa.fa-user
+          &nbsp;
+          = project.owner.email
 
 - else
   %h2
