@@ -20,6 +20,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    if current_user != @project.owner
+      respond_to do |format|
+        format.html { redirect_back fallback_location: root_path, notice: 'Project edition is only availbale to owner' }
+      end
+    end
   end
 
   # POST /projects
