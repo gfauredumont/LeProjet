@@ -1,4 +1,8 @@
-%h1 Editing Project
-= render 'form', project: @project
+.row
+  %h1.page-header
+    Editing Project
 
-= link_to 'Cancel', project_path(@project), class: "btn btn-default"
+.row
+  = render 'form', project: @project
+
+  = link_to 'Cancel', project_path(@project), class: "btn btn-default"
