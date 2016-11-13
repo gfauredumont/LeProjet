@@ -13,12 +13,17 @@
       .field.form-group
         = f.label :name
         = f.text_field :name, class: "form-control", placeholder: "Project name"
-    .col-sm-12.col-md-6
+    .col-sm-12.col-md-4
       .field.form-group
         = f.label :owner
         -# = f.hidden_field :owner_id, class: "form-control", placeholder: "Project owner", value: current_user.id
         .form-control-static
           Owner can only be yourself for now
+    .col-sm-12.col-md-2
+      .field.checkbox
+        -# %label<
+        = f.check_box :is_public, class: "form-checkbox"
+        Published
 
   .row
     .col-sm-12
