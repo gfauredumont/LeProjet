@@ -37,4 +37,39 @@ RSpec.describe Project, :type => :model do
     expect(Project.published.all.size).to eq(nb_public_projects)
   end
 
+  it "is listed in project.mine for project creator" do
+    user = FactoryGirl.create(:user)
+
+    project = FactoryGirl.create(:project, owner: user)
+
+    expect(Project.mine(user)).to include(project)
+  end
+  it "is not listed in project.mine for different user" do
+    user = FactoryGirl.create(:user)
+    project = FactoryGirl.create(:project, owner: user)
+
+    user2 = FactoryGirl.create(:user)
+
+    expect(Project.mine(user2)).not_to include(project)
+  end
+  it "is not listed in project.mine for previous owner" do
+    user = FactoryGirl.create(:user)
+    project = FactoryGirl.create(:project, owner: user)
+
+    user2 = FactoryGirl.create(:user)
+    project.update(owner: user2)
+
+    expect(Project.mine(user)).not_to include(project)
+    expect(Project.mine(user2)).to include(project)
+  end
+
+
+  it "is listed in project.mine for project creator" do
+    user = FactoryGirl.create(:user)
+
+    project = FactoryGirl.create(:project, owner: user)
+
+    expect(Project.mine(user)).to include(project)
+  end
+
 end

@@ -10,6 +10,8 @@ class Project < ApplicationRecord
   belongs_to  :owner, class_name: 'User'
 
   scope       :published, -> { where(is_public: true) }
+  scope       :mine, -> (user) { where(owner: user) }
+  scope       :visible_to_me, -> (user) { (published + mine(user)).uniq }
 
   def add_member(new_member)
     members << new_member

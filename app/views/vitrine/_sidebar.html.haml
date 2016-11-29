@@ -16,6 +16,9 @@
           %small.project-tasks-number
             = project.tasks.count
             .fa.fa-tasks
+          - if project.is_public
+            %small.project-published
+              .fa.fa-rss
         %p.list-group-item-text
           = project.description
         %p.list-group-item-text

@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   private
     def get_projects
       # WARNING: projects_controller doesn't load projects anymore due to this
-      @projects = Project.all
+      @projects = Project.visible_to_me(user_signed_in? ? current_user : nil)
     end
 end
