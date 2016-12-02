@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'octokit', '~> 4.3'
 gem 'devise', '~> 4.2'
 gem 'omniauth-facebook', '~> 4.0'
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
 gem 'administrate', '~> 0.3.0'
 # Needed for workaround on Administrate bug
