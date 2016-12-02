@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :users
+    resources :projects
+    resources :projects_tasks
+    resources :projects_users
+    resources :provider_authorizations
+    resources :tasks
+
+    root to: "projects#index"
+  end
+
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   resources :tasks

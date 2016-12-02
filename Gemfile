@@ -24,6 +24,11 @@ gem 'octokit', '~> 4.3'
 gem 'devise', '~> 4.2'
 gem 'omniauth-facebook', '~> 4.0'
 
+gem 'administrate', '~> 0.3.0'
+# Needed for workaround on Administrate bug
+gem 'bourbon', '~> 4.2.7'
+
+
 ##### BACK
 
 gem 'pg'
