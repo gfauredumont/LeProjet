@@ -13,6 +13,7 @@ class UserDashboard < Administrate::BaseDashboard
     provider_authorization: Field::HasMany,
     id: Field::Number,
     email: Field::String,
+    is_admin: Field::Boolean,
     encrypted_password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
@@ -36,10 +37,11 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :projects_users,
+    :id,
+    :email,
+    :is_admin,
     :projects,
     :provider_authorization,
-    :id,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -50,6 +52,7 @@ class UserDashboard < Administrate::BaseDashboard
     :provider_authorization,
     :id,
     :email,
+    :is_admin,
     :encrypted_password,
     :reset_password_token,
     :reset_password_sent_at,
@@ -75,6 +78,7 @@ class UserDashboard < Administrate::BaseDashboard
     :projects,
     :provider_authorization,
     :email,
+    :is_admin,
     :encrypted_password,
     :reset_password_token,
     :reset_password_sent_at,
